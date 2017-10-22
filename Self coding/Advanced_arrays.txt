@@ -1,8 +1,8 @@
-Array Homework
-
-/*1)Write a program which takes as input 1D- array and finds maximum number , it’s
-index value.*/
-
+/*Array Homework
+*
+*1)Write a program which takes as input 1D- array and finds maximum number , it’s
+*index value.
+*/
 public class MaxNumber 
 {
 	public static void main(String[] args) 
@@ -25,11 +25,32 @@ public class MaxNumber
 		System.out.println("Index position of Maximum value in an array is  :  " + index);
 		System.out.println("Maximum value in an array is  :  " + max);
 } }
-2)Write a program which takes as input 1D- array and finds minimum number, it’s
-index value.
+/*
+*2)Write a program which takes as input 1D- array and finds minimum number, it’s
+*index value.
+*/
+public class MinNumber 
+{
+	public static void main(String[] args) 
+	{
+		int a[] = new int[] { 23, 34, 13, 64, 72, 90, 10, 15, 9, 27 };
 
-3) Write a program which takes as input 2D- array and finds maximum number , it's
-index value.
+		int min = a[0]; 
+		int index = 0;
+		
+		for (int i = 1; i < a.length; i++)  
+		{
+			if (a[i] < min) 
+			{
+				min = a[i];
+				index=i;
+			}
+		}
+
+//3) Write a program which takes as input 2D- array and finds maximum number , it's
+//index value.
+
+
 
 4) Write a program which takes as input 2D- array and finds minimum number, it's
 index value.
