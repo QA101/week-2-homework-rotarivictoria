@@ -47,13 +47,39 @@ public class MinNumber
 			}
 		}
 
-//3) Write a program which takes as input 2D- array and finds maximum number , it's
-//index value.
+/*3) Write a program which takes as input 2D- array and finds maximum number , it's
+*index value.
+*/
+import java.util.Arrays;
+
+public class MaxNumber {
 
 
+    public static void main(String[] args) {
+        int[][] a = {{3, 2, 5},
+            {1, 39, 4, 8, 13}};
+        
+        int max = Integer.MIN_VALUE;
+		int indexY = 0;
+		int indexZ = 0;
+		for(int y = 0; y < a.length;y++) {
+			for(int z =0; z <a.length;z++) {
+				if(a [y][z]>max) {
+					max = a[y][z];
+					indexY= y;
+					indexZ = z;
+				}
+			}
+		}
+		System.out.println("Max value is: "+ max+"  row: "+indexY+ " column "+indexZ);
+	}
+}
 
-4) Write a program which takes as input 2D- array and finds minimum number, it's
-index value.
+/*
+*4) Write a program which takes as input 2D- array and finds minimum number, it's
+*/index value.
+
+
 
 5) Write a program which takes as input 1D- array and reverse an array.
 
