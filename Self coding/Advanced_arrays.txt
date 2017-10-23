@@ -79,10 +79,67 @@ public class MaxNumber {
 *4) Write a program which takes as input 2D- array and finds minimum number, it's
 */index value.
 
+import java.util.Arrays;
+
+public class MinNumber {
+
+
+    public static void main(String[] args) {
+        int[][] arr = 
+        	{{3, 2, 5},		// Row #0 { 0, 1, 2 }
+            {1, 39, 4, 8, 13}}; // Row #1 { 0, 1, 2, 3, 4 }
+        
+        minNumber(arr);
+    }
+        
+    private static void minNumber(int[][] arr) {
+		
+		int min = Integer.MAX_VALUE;
+	 	int minI = 0;
+	 	int minJ = 0;
+	 	for(int i = 0; i < arr.length;i++) {
+	 		for(int j = 0; j < arr[i].length;j++) {
+	 			if(arr[i][j] < min) {
+	 				min = arr[i][j];
+					minI= i;
+					minJ = j;
+				}
+			}
+	 	}
+	 	System.out.println("Min number is: "+ min+" at row: "+minI+ " and column "+minJ);
+	 }
+}
+
 
 
 5) Write a program which takes as input 1D- array and reverse an array.
 
+public class Project3 {
+	public static void main (String [] args) {
+		int [] arr = {1,2,3,4}; 
+		int start = 0;
+		int end = arr.length - 1;
+		reverseArray(arr, start, end);
+		
+		System.out.print("Reversed array: ");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + ",");
+		}
+		System.out.println();
+	}
+			
+	private static void reverseArray(int arr[], int start, int end)
+	{
+	    while (start < end)
+	    {
+	        int temp = arr[start];      
+	        arr[start] = arr[end];            
+	        arr[end] = temp;
+	        start++;
+	        end--;
+	    }   
+	}  
+}
 6) 
 6.1 Write a program which takes as input two 1D- array and find the sum of two
 array and store results in new array.
